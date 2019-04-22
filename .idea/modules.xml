@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Avenue_salon.iml" filepath="$PROJECT_DIR$/.idea/modules/Avenue_salon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Avenue_salon_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Avenue_salon_main.iml" group="Avenue_salon" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Avenue_salon_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Avenue_salon_test.iml" group="Avenue_salon" />
+    </modules>
+  </component>
+</project>
