@@ -39,4 +39,8 @@ public class Stylist {
         return mClients;
     }
 
+    public void addClient(Client client) {
+        mClients.add(client);
+    }
+
 }

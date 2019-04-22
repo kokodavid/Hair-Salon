@@ -52,5 +52,13 @@ public class StylistTest {
         assertEquals(0, testStylist.getClients().size());
     }
 
+    @Test
+    public void addTask_addsClientToList_true() {
+        Stylist testStylist = new Stylist("Queen");
+        Client testClient = new Client("Mow the lawn");
+        testStylist.addClient(testClient);
+        assertTrue(testStylist.getClients().contains(testClient));
+    }
+
 
 }
