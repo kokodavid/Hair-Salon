@@ -7,11 +7,13 @@ public class Stylist {
     private String mName;
     private static List<Stylist> instances = new ArrayList<Stylist>();
     private int mId;
+    private List<Client> mClients;
 
     public Stylist(String name) {
         mName = name;
         instances.add(this);
         mId = instances.size();
+        mClients = new ArrayList<Client>();
     }
 
     public String getName() {
@@ -32,4 +34,9 @@ public class Stylist {
     public static Stylist find(int id) {
         return instances.get(id - 1);
     }
+
+    public List<Client> getClients() {
+        return mClients;
+    }
+
 }

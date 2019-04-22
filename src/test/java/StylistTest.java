@@ -45,6 +45,12 @@ public class StylistTest {
         assertEquals(Stylist.find(secondStylist.getId()), secondStylist);
     }
 
+    @Test
+    public void getClients_initiallyReturnsEmptyList_ArrayList() {
+        Stylist.clear();
+        Stylist testStylist = new Stylist("Queen");
+        assertEquals(0, testStylist.getClients().size());
+    }
 
 
 }
