@@ -37,6 +37,13 @@ public class StylistTest {
         Stylist testStylist = new Stylist("Queen");
         assertEquals(1,testStylist.getId());
     }
+    @Test
+    public void find_returnsStylistWithSameId_secondCategory() {
+        Stylist.clear();
+        Stylist firstStylist = new Stylist("Queen");
+        Stylist secondStylist = new Stylist("Alison");
+        assertEquals(Stylist.find(secondStylist.getId()), secondStylist);
+    }
 
 
 

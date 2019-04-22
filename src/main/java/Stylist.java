@@ -28,4 +28,8 @@ public class Stylist {
     public int getId() {
         return mId;
     }
+
+    public static Stylist find(int id) {
+        return instances.get(id - 1);
+    }
 }
