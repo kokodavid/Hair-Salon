@@ -1,0 +1,90 @@
+<div class="view" style="background-image: url('/images/newClients.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+ <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+              <a class="navbar-brand" href="#"><strong>Rembo Beauty</strong></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/clients">Clients</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/stylists">Stylists</a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="https://github.com/peter-wachira/"  onclick="btnClick()" class="nav-link border border-light rounded" target="_blank">
+                      <i class="fab fa-github mr-2"></i>GitHub
+                     </a>
+                   </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- Navbar -->
+          <!-- Full Page Intro -->
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-black-light align-items-center">
+              <!-- Content -->
+              <div class="container text-white">
+                <!--Grid row-->
+                <div class="indexRow">
+                  <!--Grid column-->
+                  <div class="col-md-12 mb-4">
+
+                    <h2 class="alignCenter text-warning">New Client Details</h2>
+                    <form class="form-horizontal" action="/clients" method="post">
+                        <div class="form-group">
+                         <label class="control-label col-sm-2" for="name">Name:</label>
+                         <div class="col-sm-10">
+                           <input type="text" class="form-control transparentInputFields" id="name" name ="name" placeholder="Enter Name">
+                         </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-2" for="Gender">Gender:</label>
+                          <label class="radio-inline col-sm-offset-1" for="gender-male">
+                            <input type="radio" id="gender-male" name="gender" value="M" checked="checked">Male
+                          </label>
+                          <label class="radio-inline"><input type="radio" name="gender" value="F">Female</label>
+                        </div>
+
+                        <div class="form-group">
+                         <label class="control-label col-sm-2" for="contact">Phone No:</label>
+                         <div class="col-sm-10">
+                           <input type="text" class="form-control transparentInputFields" id="contact" name="contact" placeholder="+254..">
+                         </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-2" for="stylist_id">Select Stylist:</label>
+                          <div class="col-sm-3">
+                             <select class="form-control" id='stylist_id' name='stylist_id' type='text'>
+                             #foreach($stylist in $stylists)
+                               <option value="$stylist.getId()">$stylist.getName()</option>
+                             #end
+                             </select>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
+                         <div class="col-sm-offset-2 col-sm-10">
+                           <button type="submit" class="btn btn-grey">Submit</button>
+                         </div>
+                        </div>
+                    </form>
+
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+          <!-- Full Page Intro -->
+        </header>

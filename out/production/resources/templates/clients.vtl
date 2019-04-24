@@ -1,0 +1,23 @@
+
+                                                                 #foreach($client in $stylist.getClients())
+                                         <div class ="row list-group-item list-group-item-action flex-column align-items-start  stylish-color-dark text-white overflow-auto" >
+                                          <div class="col-md-2">
+                                            <li></li>
+                                          </div>
+                                          <div class="col-md-4">
+                                            $client.getName()
+                                          </div>
+                                            <form action="/clients/$client.getId()/delete" method="post">
+                                                 <i class="fas fa-trash-alt"></i>
+                                                 </form>
+                                              </div>
+                                          </div>
+                                         </div>
+                                         <hr>
+                                        #end
+                                    #else
+                                      <h3>NO CLIENTS ASSIGNED TO THIS STYLIST</h3>
+                                    #end
+
+                                  <br>
+                                  <a href="/stylists/$stylist.getId()/clients/new"><button type="button" class="btn btn-grey">New Client</button></a>

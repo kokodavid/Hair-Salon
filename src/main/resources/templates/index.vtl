@@ -1,30 +1,18 @@
-<h1>AVENUE SALON CLIENTS</h1>
+<h1>WELCOME TO THE AVENUE SALON </h1>
 <div class = jumbotron>
-<p>LIST OF CLIENTS</p>
-#if ($clients)
-  <ul>
-    #foreach ($client in $clients)
-      <li>$client.getName()</li>
-    #end
-  </ul>
-#else
-  <p>No Available Clients!</p>
-#end
+<h1> Stylists</h1>
+<p> AVAILABLE STYLIST'S</p>
+<a href="/stylists">All stylists</a>
+<ul>
+  #foreach ($stylist in $stylists)
+    <li><a href="/stylists/$stylist.getId()">$stylist.getName()</a></li>
+  #end
+</ul>
 </div>
-<div class = "salon">
-<p>Add a new Client:</p>
-<br>
-<form action="/clients" method="post">
-  <label for="name">Client Name</label>
-  <br>
-  <input id="name" name="name" type="text">
-<br>
-<br>
-  <button type="submit" class="btn btn-default">Add new Client</button>
-</form>
+<a href="/stylists/new">Add New Stylist</a>
+
 </div>
-<br>
-<a href="/stylists">View stylists</a>
-<br>
-<a href="/stylists/new">Add a New Stylist's</a>
-<br>
+
+
+
+
