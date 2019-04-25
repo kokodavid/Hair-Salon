@@ -29,5 +29,5 @@ The app is developed by David Mochoge.
 For help concerning the application contact the developer through the above provided email and telephone number.
 
 
-
-
+## KNOWN BUGS
+The application has few known bugs including providing a stylist id inorder to add a client to a specific Stylist for now the user can access the stylist id through the route on the browser .
