@@ -36,3 +36,5 @@ Thumbs.db
 ############
 build/
 .gradle/
+
+!graddle-wrapper.jar

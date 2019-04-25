@@ -1,0 +1,1 @@
+web: ./build/install/Avenue_salon/bin/Avenue_salon
