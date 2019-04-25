@@ -1,10 +1,28 @@
-<h1>$stylist.getName() clients:</h1>
+<nav id="navbar-example2" class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="/">HOME</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" <a href="/stylists">STYLISTS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/stylists/$stylist.getId()/clients/new">ADD NEW A CLIENT</a>
+    </li>
+</nav>
 
-<ul>
+
+
+<h1>$stylist.getName()'s clients:</h1>
+
   #foreach($client in $stylist.getClients())
-   <li>$client.getName()</li>
+   <li><a href="/stylists/$stylist.getId()/clients/$client.getId()">$client.getName()</a></li>
   #end
 </ul>
 
-<a href="/stylists/$stylist.getId()/clients/new">Add a new client</a>
-<a href="/stylists">All stylists</a>
+<h2>DELETE STYLIST:</h2>
+
+<form action="/stylists/$stylist.getId()/delete" method="post">
+<button type="submit" class="btn aqua-gradient b">Delete</button>
+</form>
+
+
+

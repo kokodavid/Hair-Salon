@@ -57,6 +57,7 @@ public class StylistTest {
         assertEquals(true, Stylist.all().get(1).equals(secondStylist));
 
     }
+
     @Test
     public void save_assignsIdToObject() {
         Stylist myStylist = new Stylist("Quen");
@@ -89,45 +90,18 @@ public class StylistTest {
         firstClient.save();
         Client secondClient = new Client("shiks", myStylist.getId());
         secondClient.save();
-        Client[] clients = new Client[] { firstClient, secondClient };
+        Client[] clients = new Client[]{firstClient, secondClient};
         assertTrue(myStylist.getClients().containsAll(Arrays.asList(clients)));
     }
+
+
+    @Test
+    public void update_updatesStylistName_true() {
+        Stylist myStylist = new Stylist("Queen");
+        myStylist.save();
+        myStylist.update("Quue");
+        assertEquals("Quee", Client.find(myStylist.getId()).getName());
+    }
 }
-
-/*    @Test
-    public void clear_emptiesAllStylistsFromList_0() {
-        Stylist testStylist = new Stylist("Queen");
-        Stylist.clear();
-        assertEquals(Stylist.all().size(),0);
-    }
-
-    @Test
-    public void getId_stylistInstantiatesWithAnId_1() {
-        Stylist testStylist = new Stylist("Queen");
-        assertEquals(1,testStylist.getId());
-    }
-    @Test
-    public void find_returnsStylistWithSameId_secondCategory() {
-        Stylist.clear();
-        Stylist firstStylist = new Stylist("Queen");
-        Stylist secondStylist = new Stylist("Alison");
-        assertEquals(Stylist.find(secondStylist.getId()), secondStylist);
-    }
-
-    @Test
-    public void getClients_initiallyReturnsEmptyList_ArrayList() {
-        Stylist.clear();
-        Stylist testStylist = new Stylist("Queen");
-        assertEquals(0, testStylist.getClients().size());*/
-  /*  }*/
-/*
-    @Test
-    public void addTask_addsClientToList_true() {
-        Stylist testStylist = new Stylist("Queen");
-        Client testClient = new Client("Mow the lawn");
-        testStylist.addClient(testClient);
-        assertTrue(testStylist.getClients().contains(testClient));
-    }*/
-
 
 
