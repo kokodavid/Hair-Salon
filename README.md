@@ -16,4 +16,13 @@ The app uses the following technologies
     <li>Bootstrap</li>
   </ol>
 
+## CONTRIBUTORS
+The app is developed by David Mochoge.
+<p>Developers details</p>
+<ul>
+    <li>Java Developer</li>
+    <li>TEL:0662321841</li>
+    <li>EMAIL:kokodavid78@gmail.com</li>
+</ul>
+
 
