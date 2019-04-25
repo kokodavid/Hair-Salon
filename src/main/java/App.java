@@ -19,7 +19,7 @@ public class App {
       port = 4567;
     }
 
-    setPort(port);
+    port(port);
 
 
     get("/", (request, response) -> {
